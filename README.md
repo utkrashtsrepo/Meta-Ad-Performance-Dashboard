@@ -1,82 +1,142 @@
-# Meta-Ad-Performance-Dashboard
-Built a Meta Ads performance dashboard using SQL, Power BI, and DAX to analyze campaign budgets, impressions, clicks, engagement, and purchases. Developed KPIs for CTR, engagement, and conversion rates, with interactive visualizations to compare campaign performance and audience demographics and identify optimization opportunities.
+# Meta Ad Performance Dashboard | SQL, Power BI
 
-Project Overview
-This repository contains a Power BI Dashboard designed for the comprehensive analysis and optimization of Meta (Facebook & Instagram) advertising campaigns. It transforms raw ad event data, campaign budget information, and user demographics into actionable insights across the entire marketing funnel—from impression to final purchase.
+## Project Overview
 
-The goal is to provide media buyers and marketing managers with the necessary tools to track performance, assess campaign efficiency, and refine audience targeting.
+The Meta Ad Performance Dashboard analyzes Facebook and Instagram advertising campaigns using SQL, Power BI, and DAX. It transforms advertising event data, campaign budgets, and audience demographics into actionable insights across the marketing funnel, from impressions and clicks to purchases.
 
-Objectives
-Track ad performance metrics across multiple Meta platforms.
+The dashboard helps analyze campaign effectiveness, compare audience engagement, identify high-performing advertisements, and understand how campaign budgets relate to advertising outcomes.
 
-Understand engagement trends by gender, age, and country.
+## Objectives
 
-Identify top-performing ad types and campaigns.
+- Analyze advertising performance across Meta platforms.
+- Track campaign engagement and conversion metrics.
+- Compare performance across age groups, genders, countries, and ad types.
+- Identify high-performing campaigns and audience segments.
+- Evaluate campaign budgets alongside engagement and purchase outcomes.
+- Support data-driven marketing decisions through interactive visualizations.
 
-Monitor click-through rate (CTR), engagement rate, and purchase rate.
+## Tools and Technologies
 
-Evaluate the impact of ad budgets on overall campaign success.
+- **SQL Server / SQL:** Data extraction, querying, and transformation.
+- **Power BI Desktop:** Interactive dashboards and data visualization.
+- **DAX:** Calculated measures and performance KPIs.
+- **Power Query:** Data preparation and transformation.
+- **CSV / Excel:** Source data management.
 
-Key Metrics
-Metric	Description
-Impressions	Total number of ad views
-Clicks	Number of times users clicked on ads
-Shares	Number of ad shares
-Comments	User comments received
-Purchases	Conversion events after ad interaction
-Engagements	Total interactions of Clicks, Shares , Comments.
-CTR (Click Through Rate)	(Clicks ÷ Impressions) × 100
-Engagement Rate	((Clicks + Shares + Comments) ÷ Impressions) × 100
-Conversion Rate	Percentage of clicks that resulted in purchases.
-Purchase Rate	(Purchases ÷ Impressions) × 100
-Conversion Rate	Overall conversion from engagement to purchase
-Total & Avg Budget	Campaign spend overview
-🛠️ Tools & Technologies
-Power BI Desktop – Data modeling, visualization, and dashboard creation
+## Data Sources
 
-SQL Server – Data extraction and transformation
+The dashboard uses four CSV files representing different parts of the advertising ecosystem:
 
-DAX – Calculated KPIs and advanced measures
+| File | Description |
+|---|---|
+| `ad_events.csv` | User interactions with advertisements, including clicks, shares, comments, and purchases. |
+| `ads.csv` | Advertisement details, including platform, ad type, and demographic attributes. |
+| `campaigns.csv` | Campaign-level information, including budgets and campaign status. |
+| `users.csv` | User demographic and interest information for audience segmentation. |
 
-Excel/CSV Files – Data source (ad_events, ads, campaigns)
+## Key Performance Indicators
 
-Required Data Sources
-The dashboard requires the following four CSV files to be loaded into Power BI. They represent a simplified but complete ad ecosystem:
+| Metric | Calculation / Purpose |
+|---|---|
+| Impressions | Total number of ad views. |
+| Clicks | Total number of ad clicks. |
+| Shares | Number of times ads were shared. |
+| Comments | Number of comments received. |
+| Purchases | Total recorded purchase events. |
+| Engagements | Clicks + Shares + Comments. |
+| Click-Through Rate (CTR) | (Clicks / Impressions) × 100 |
+| Engagement Rate | (Engagements / Impressions) × 100 |
+| Conversion Rate | (Purchases / Clicks) × 100 |
+| Purchase Rate | (Purchases / Impressions) × 100 |
+| Total and Average Budget | Campaign budget overview. |
 
-File	Description
-ad_events.csv	Contains all user interactions with ads
-ads.csv	Details of each advertisement (platform, ad type, demographics)
-campaigns.csv	Campaign-level data including budgets and status
-users.csv	User demographic and interest data for segmentation.
-Principal Visualizations
-Dashboard
+*Note: Conversion rate is defined here as purchases divided by clicks. Ensure the DAX measures follow the same definition.*
 
-image image
-How to Set Up and Run the Dashboard
-Power Bi
-Clone this repository
-bash  git clone https://github.com/AmeeJoshi-MCA/Social-Media-Ad-Performance.git
+## Dashboard Features
 
-Place Data Files: Ensure the four required .csv files (ad_events.csv, ads.csv, campaigns.csv, users.csv) are placed in the same folder as the .pbix file.
+- **Campaign Performance:** Compare campaign activity, budgets, and outcomes.
+- **Marketing Funnel Analysis:** Track impressions, clicks, engagement, and purchases.
+- **Audience Segmentation:** Explore performance by gender, age group, country, and interests.
+- **Ad Type Analysis:** Compare advertising formats and identify stronger-performing segments.
+- **KPI Monitoring:** Review key advertising metrics through interactive visuals.
+- **Budget Analysis:** Examine campaign budgets alongside advertising performance.
 
-Open the file in Power BI Desktop.
+## Dashboard Preview
 
-Refresh Data: If the data doesn't load immediately, go to the Home tab and click Refresh to load the data from the CSV files. (The Power Query steps assume the CSV files are in the same directory as the PBIX file).
+Add your dashboard screenshots below. Upload the images to a folder such as `images/` in this repository and update the filenames if needed.
 
-SQL
-Connect to your database (MySQL, PostgreSQL, etc.).
-Run the SQL scripts in the sql/ folder to extract raw data and all kpi queries.
-🏁 Conclusion
-The Meta Ad Performance Dashboard is more than just a data visualization project — it’s a complete analytical solution that showcases my ability to transform complex advertising data into clear, actionable insights.
+```markdown
+![Meta Ads Dashboard](images/dashboard.png)
 
-Through this project, I demonstrated expertise in:
+![Campaign Performance Analysis](images/campaign-performance.png)
+```
 
-SQL for data extraction and transformation,
+## Repository Structure
 
-DAX for advanced KPI calculations,
+```text
+Social-Media-Ad-Performance/
+├── PowerBi/
+│   └── SocialMediaAdPerformance.pbit
+├── SQL/
+│   └── SQLQuery1.sql
+├── ad_events.csv
+├── ads.csv
+├── campaigns.csv
+├── users.csv
+└── README.md
+```
 
-Power BI for designing clean, interactive, and user-centric dashboards,
+*The structure above reflects the documented project files; adjust the paths if your repository uses a different layout.*
 
-Strong understanding of digital marketing analytics and business intelligence storytelling.
+## Getting Started
 
-This project reflects end-to-end data analytics workflow — from building robust SQL queries to creating executive-level dashboards that help marketing teams make data-driven decisions.
+### Prerequisites
+
+- Power BI Desktop
+- SQL Server or another compatible relational database
+- The four required CSV data files
+
+### 1. Clone the Repository
+
+```bash
+git clone [https://github.com/utkrashtsrepo/Meta-Ad-Performance-Dashboard]
+cd Social-Media-Ad-Performance
+```
+
+### 2. Prepare the Data
+
+Ensure that `ad_events.csv`, `ads.csv`, `campaigns.csv`, and `users.csv` are available in the locations expected by the Power BI template and SQL scripts.
+
+### 3. Open the Power BI Template
+
+Open `PowerBi/SocialMediaAdPerformance.pbit` in Power BI Desktop.
+
+Configure the data source paths if prompted, then refresh the data to load the CSV files.
+
+### 4. Run the SQL Queries
+
+Connect to your database and execute the SQL scripts in the `SQL/` directory to explore advertising data and calculate performance metrics.
+
+Update database connections and table names as required by your environment.
+
+### 5. Explore the Dashboard
+
+Use the dashboard filters and visualizations to compare campaign performance, analyze audience segments, and investigate advertising funnel metrics.
+
+## Key Learnings
+
+- Writing SQL queries to analyze advertising event data.
+- Creating calculated KPIs and measures using DAX.
+- Building interactive Power BI dashboards.
+- Analyzing marketing funnel performance and audience segments.
+- Translating raw advertising data into meaningful business insights.
+
+## Conclusion
+
+The Meta Ad Performance Dashboard demonstrates an end-to-end business intelligence workflow, combining SQL-based data analysis, DAX calculations, and Power BI visualizations to evaluate advertising performance. It provides a structured view of campaign activity, audience engagement, budget allocation, and purchase outcomes to support data-informed marketing decisions.
+
+## Author
+
+**Utkrasht Gupta**
+
+- GitHub: [utkrashtsrepo](https://github.com/utkrashtsrepo)
